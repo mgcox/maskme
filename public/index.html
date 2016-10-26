@@ -4,10 +4,11 @@
 	<title>Fake Identity Generator</title>
 
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-	<script type="text/javascript" src="javascripts/scripts.js"></script>
+	<script type="text/javascript" src="script.js"></script>
 
+	<meta charset="utf-8">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 </head>
 <body>
@@ -20,7 +21,6 @@ body {
 	height: auto;
 	min-height: 600px;
 	background-color: #ffffff;
-
 }
 
 body {
@@ -29,18 +29,17 @@ body {
 
 form span {
 	padding: 12px;
-
 }
 </style>
 	<section class="container" id="middle">
 		<div class="row">
 			<div class="col-sm-12" id="main">
 				<br><br><br>
-				<h1>Random Identity Generator</h1>
+				<h1>Random Name Generator</h1>
 				<br><br>
 				<p>select a gender</p>
 				<form>
-				  <span><input type="radio" name="gender" value="male" checked>Male </span><span><input type="radio" name="gender" value="female"> Female</span><span><button type="button" onclick="">get identity</button></span><div></p><br>
+				  <span><input type="radio" name="gender" value="male" id="male">Male </span><span><input type="radio" name="gender" value="female" id="female"> Female</span><span><button type="button" onclick="">get identity</button></span><div></p><br>
 				</form>
 
 				<div id="identity"></div>
