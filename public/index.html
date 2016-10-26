@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Dictionary</title>
+	<title>Fake Identity Generator</title>
 
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	<script type="text/javascript" src="javascripts/scripts.js"></script>
@@ -32,9 +32,12 @@ body {
 			<div class="col-sm-12" id="main">
 				<br><br><br>
 				<h1>Random Identity Generator</h1>
-				<br>
-				<p id="title">Enter A Word:   <input type="text" id="wordfield" value="">
-				<button type="button" onclick="getdef($(wordfield).val())">define</button></p><br>
+				<br><br>
+				<form>
+				  <input type="radio" name="gender" value="male" checked> Male<br>
+				  <input type="radio" name="gender" value="female"> Female<br>
+				</form>
+				<button type="button" onclick="">get identity</button></p><br>
 				<div id="definition"></div>
 			</div>
 		</div>
