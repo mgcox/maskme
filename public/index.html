@@ -23,8 +23,13 @@ body {
 
 }
 
-#title {
-	font-size: 32px;
+body {
+	font-size: 22px;
+}
+
+form span {
+	padding: 12px;
+
 }
 </style>
 	<section class="container" id="middle">
@@ -33,12 +38,12 @@ body {
 				<br><br><br>
 				<h1>Random Identity Generator</h1>
 				<br><br>
+				<p>select a gender</p>
 				<form>
-				  <input type="radio" name="gender" value="male" checked> Male<br>
-				  <input type="radio" name="gender" value="female"> Female<br>
+				  <span><input type="radio" name="gender" value="male" checked>Male </span><span><input type="radio" name="gender" value="female"> Female</span><span><button type="button" onclick="">get identity</button></span><div></p><br>
 				</form>
-				<button type="button" onclick="">get identity</button></p><br>
-				<div id="definition"></div>
+
+				<div id="identity"></div>
 			</div>
 		</div>
 	</section>
