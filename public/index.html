@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dictionary</title>
+
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="javascripts/scripts.js"></script>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+</head>
+<body>
+<style>
+body {
+	background-color: #414141;
+}
+
+#middle {
+	height: auto;
+	min-height: 600px;
+	background-color: #ffffff;
+
+}
+
+#title {
+	font-size: 32px;
+}
+</style>
+	<section class="container" id="middle">
+		<div class="row">
+			<div class="col-sm-12" id="main">
+				<br><br><br>
+				<h1>Random Identity Generator</h1>
+				<br>
+				<p id="title">Enter A Word:   <input type="text" id="wordfield" value="">
+				<button type="button" onclick="getdef($(wordfield).val())">define</button></p><br>
+				<div id="definition"></div>
+			</div>
+		</div>
+	</section>
+</body>
