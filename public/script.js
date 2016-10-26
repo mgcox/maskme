@@ -1,7 +1,9 @@
 $(document).ready(function() {
+  
   $('button').click(function() {
+    var fullName='';
     var url = '';
-    var firstname = '';
+    var firstName = '';
     if(document.getElementById('male').checked) {
       console.log('male');
       url = '../getmalename';
@@ -13,13 +15,23 @@ $(document).ready(function() {
     //set url based on whether or not the user wants to get male or female data
     $.get(url, function(data, status) {
       //manipulate data
-      console.log(data.toString());
+      var res = JSON.parse(data.toString());
+      var firstName = res.name;
+      fullName += firstName.trim();
+      console.log(firstName);
     });
 
     var url2 = '../getlastname';
-    var lastname = '';
+    var lastName = '';
     $.get(url2, function(data, status) {
-        console.log(data.toString());
+      var res = JSON.parse(data.toString());
+      var lastName = res.name;
+      fullName += (' '+lastName.trim());
+      console.log(lastName);
+      console.log("fullName: "+fullName);
+      $('#identity').html('<p><b>Name: </b>'+fullName+'</p>');
     });
+
+
   });
 });
