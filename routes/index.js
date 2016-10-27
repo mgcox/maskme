@@ -40,6 +40,26 @@ router.get('/getlastname', function(req, res, next) {
 
 });
 
+router.get('/getaddress', function(req, res, next) {
+  console.log('in getaddress');
+
+  fs.readFile(__dirname + '/addresses.txt', (err, data) => {
+    if(err) throw err;
+    var arr = data.toString().split('\n');
+    var index = getRandomInt(1, arr.length-1);
+    console.log("output: "+arr[index]);
+    var arr2 = (arr[index]).split(',');
+    var address = arr2[0]+', '+arr2[1]+', '+arr2[2]+', '+arr2[4];
+    var str = arr2[5];
+    var phone = str.substring(1, str.length);
+    console.log(address);
+    console.log(phone);
+
+    res.status(200).json('{\"address\":\"'+address+'\",\"phone\":\"'+phone+'\"}');
+  });
+
+});
+
 function getRand(data) {
   var content = data.toString();//.split(',');
   var arr = content.split('\r');

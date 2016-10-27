@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-  
+
   $('button').click(function() {
     var fullName='';
     var url = '';
@@ -39,5 +39,16 @@ $(document).ready(function() {
     var date = new Date(+start + Math.random() * (end - start));
     var dateString = date.toString('yyyy-MM-dd');
     $('#birthday').html('<p><b>Birthdate: </b>'+ dateString+'</p>');
+
+    var url3 = '../getaddress';
+    var address = '';
+    $.get(url3, function(data, status) {
+      var res = JSON.parse(data.toString());
+      console.log(res);
+      $('#address').html('<p><b>Address: </b>'+res.address+'</p>');
+      $('#phone').html('<p><b>Phone Number: </b>'+res.phone+'</p>');
+
+    });
+
   });
 });
