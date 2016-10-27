@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
   
   $('button').click(function() {
@@ -33,5 +34,10 @@ $(document).ready(function() {
     });
 
 
+    var start = new Date(1930,12,01);
+    var end = new Date(1991,12,20);
+    var date = new Date(+start + Math.random() * (end - start));
+    var dateString = date.toString('yyyy-MM-dd');
+    $('#birthday').html('<p><b>Birthdate: </b>'+ dateString+'</p>');
   });
 });
